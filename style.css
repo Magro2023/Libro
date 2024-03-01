@@ -1,0 +1,123 @@
+*{ 
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: justify;
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container, .book-content{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.container{ 
+    width: 100%;
+    height: 100vh;
+    background-color: #2d6f75;
+}
+
+.book-content{
+    width: 65%;
+    min-width: 235px;
+    max-width: 400px;
+    height: 330px;
+    position:relative;
+    perspective: 1000px;
+    transition: 1s;
+}
+
+.book{
+    position: absolute;
+    width: 100%;
+    height: 160%;
+    transition: 2s;
+    transform-style: preserve-3d;
+    transform-origin:left;
+}
+
+.face-front, .face-back{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #e2bfa4;
+}
+
+.face-front{
+    box-shadow: inset 3px 0px 20px -7px black;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; 
+}
+
+.face-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(-1px) rotateY(180deg);
+    box-shadow: inset -3px 1px 20px -7px black;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#portada{
+    background: url("../Imagenes/imagen.jpe");
+}
+
+#portada-back{
+    background: url("../Imagenes/portada\ 2.jpg");
+}
+
+#portada, #portada-back{
+    background-size: 105% 105%;
+}
+
+.trnsf-reset{
+    transform: translateX(0px);
+}
+
+.trns{
+    transform: translateX(80px);
+}
+
+@media screen and (max-width: 800px){   
+    p{
+        font-size: 15px;
+    }
+}
+
+img{
+    width: 345px;
+    height: 160px;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    color: rgb(58, 64, 69);
+    font-family: 'Black Clover Font', sans-serif;
+}
+
+@import url('https://fonts.cdnfonts.com/css/black-clover-font');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+.b{
+        width: 345px;
+        height: 180px;
+        align-items: center;
+}
+
+footer{
+    text-align: center;
+    font-size: 48%;    
+    font-family: 'Montserrat', sans-serif;
+}
